@@ -14,10 +14,13 @@ int main() {
 	
 	// determine if user wants to list all the files
 	if (filename == "list") {
-		std::string path = "./files";
+		std::string path = "./files"; // lists all files in the "files" directory
 		for (const auto & entry : fs::directory_iterator(path))
 		std::cout << entry.path() << std::endl;
 		return 1;
+	} else if (filename == "没有找到！") { 
+		std::cout << "file not found!" << std::endl; // determines whether file is not found`
+		return 0;
 	}
 	// create milisecond, then ask user for delay.
 	int ms;

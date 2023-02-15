@@ -21,8 +21,8 @@ string get_text(string filename) {
     		ostringstream ss; 
     		ss << f.rdbuf(); // reading data
     		str = ss.str();
-  	} else { //  if operation was not
-	  return "file not found!";
+  	} else { //  if operation failed
+	  return "没有找到！"; // written in chinese to decrease likelihood of it cancelling because of an actual file
 	}
 	return str;
 }
