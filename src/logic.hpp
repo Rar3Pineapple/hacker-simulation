@@ -1,4 +1,6 @@
-#ifndef logichpp
+// Some comments may be redundant
+
+#ifndef logichpp // defining import library 
 #define logichpp
 
 
@@ -19,7 +21,9 @@ string get_text(string filename) {
     		ostringstream ss; 
     		ss << f.rdbuf(); // reading data
     		str = ss.str();
-  	};
+  	} else { //  if operation was not
+	  return "file not found!";
+	}
 	return str;
 }
 
