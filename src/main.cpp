@@ -3,6 +3,8 @@
 #include <iostream>
 #include "logic.hpp"
 #include <string>
+#include <vector>
+
 // create a namespace for the file system
 namespace fs = std::filesystem;
 
@@ -18,23 +20,14 @@ int main() {
 		for (const auto & entry : fs::directory_iterator(path))
 		std::cout << entry.path() << std::endl;
 		return 1;
-	} else if (filename == "没有找到！") { 
-		std::cout << "file not found!" << std::endl; // determines whether file is not found`
-		return 0;
 	}
 	// create milisecond, then ask user for delay.
 	int ms;
-	std::cout << "enter ms delay" << std::endl;
+	std::cout << "enter delay (in miliseconds)" << std::endl;
 	std::cin >> ms;
 	
 	// assign text to print int str.
-	string str = get_text("files/" + filename);
-	// print text forever
-	while (1 == 1) {
-		for (int i = 0; i < str.size(); i ++) {
-			std::cout << str[i]; 
-			usleep(ms);
-		}
-	}
+	vector<string> str = get_text("files/" + filename);
+	print_text(str, ms);
 	return 0;
 }
