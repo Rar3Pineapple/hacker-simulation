@@ -21,3 +21,5 @@ Currently, an easier way to run this program is planned for the future.
 [Java](https://github.com/Anuken/Mindustry)
 
 [Cpp/C++](https://github.com/nlohmann/json)
+
+[Python](https://github.com/insanum/gcalcli)

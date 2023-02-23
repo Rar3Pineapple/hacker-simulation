@@ -23,7 +23,7 @@ int main() {
 	}
 	// create milisecond, then ask user for delay.
 	int ms;
-	std::cout << "enter delay (in miliseconds)" << std::endl;
+	std::cout << "enter delay (in miliseconds; recommended is 10000)" << std::endl;
 	std::cin >> ms;
 	
 	// assign text to print int str.
